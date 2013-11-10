@@ -10,10 +10,10 @@ class Section
 	
 	public TimeSlot[] timeSlot;
 	private int type;
+    private int num;
 	private string instructor;
-	
-	
-	public int Type
+    
+	int Type
     {
         get{ return sectionType; }
         set
@@ -27,63 +27,26 @@ class Section
         }
     }
     
-    public string Instructor
-    {
-        get{ return instructor; }
-        set{ instructor = value; }
-    }
-}
-
-class TimeSlot
-{
-    public TimeSlot()
-	{
-		num = 0;
-		type = 0;
-		day = 0;
-		instructor = "";
-		startTime = 0;
-		length = 0;
-		location = 0;
-	}
-	
-	
-    enum WeekDay { M, T, W, Th, F, S, SU };
-    int num;
-    int day;
-    int startTime;	//indexed by half hour from 0800 please
-    int length;		//in minutes, please
-    string location;
-    
     int Number
     {
         get{ return num; }
         set{ num = value; }
     }
     
-    
-    
-    public int Day
+    string Instructor
     {
-        get{ return day; }
-        set{ day = value; }
+        get{ return instructor; }
+        set{ instructor = value; }
     }
     
-    public int Time
+    TimeSlot[] TimeSlots
     {
-        get{ return startTime; }
-        set{ startTime = value; }
+        get{ return timeSlot; }
+        set{ timeSlot = value; }
     }
     
-    public int Length
+    public void InitializeTimeSlots( int numOfTimeSlots )
     {
-        get{ return length; }
-        set{ length = value; }
-    }
-    
-    public int Location
-    {
-        get{ return location; }
-        set{ location = value; }
+        timeSlots = new TimeSlot[numOfTimeSlots];
     }
 }
