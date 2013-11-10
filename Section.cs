@@ -1,52 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
 class Section
 {
-	enum Type { LECTURE, TUTORIAL, LAB };
-	
-	public Section ()
-	{
-		type = 0;
-		instructor = "";
-	}
-	
-	public TimeSlot[] timeSlot;
-	private int type;
-    private int num;
-	private string instructor;
-    
-	int Type
+    // enum Type { LECTURE, TUTORIAL, LAB };
+
+    public Section()
     {
-        get{ return sectionType; }
+        type = "";
+    }
+
+    public TimeSlot[] timeSlot;
+    private string type;
+    private int num;
+
+    public string Type
+    {
+        get { return type; }
         set
-        { 
-            if( value.ToLower() == "lec" )
-                type = Type.LECTURE;
-            else if( value.ToLower() == "tut" )
-                type = Type.TUTORIAL;
-            else if( value.ToLower() == "lab" )
-                type = Type.LAB;
+        {
+            type = value.ToLower();
         }
     }
-    
-    int Number
+
+    public int Num
     {
-        get{ return num; }
-        set{ num = value; }
+        get { return num; }
+        set { num = value; }
     }
-    
-    string Instructor
+
+    public TimeSlot[] TimeSlots
     {
-        get{ return instructor; }
-        set{ instructor = value; }
+        get { return timeSlot; }
+        set { timeSlot = value; }
     }
-    
-    TimeSlot[] TimeSlots
+
+    public void InitializeTimeSlots(int numOfTimeSlots)
     {
-        get{ return timeSlot; }
-        set{ timeSlot = value; }
-    }
-    
-    public void InitializeTimeSlots( int numOfTimeSlots )
-    {
-        timeSlots = new TimeSlot[numOfTimeSlots];
+        TimeSlot[] timeSlots = new TimeSlot[numOfTimeSlots];
     }
 }
