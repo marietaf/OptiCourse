@@ -2,19 +2,21 @@ public bool Generate ( Course course[ ], int n )
 {
 
 	bool noConflicts = true;
+	int ctr = 0;
 	
 	foreach ( Section i in course[ n ].section )	// for each section in course
 	{
+		ctr++;
 		noConflicts = true; // start by assuming that there will not be a conflict
 		
-		foreach ( timeSlot j in course[ n ].section[ i ].timeSlot )
+		foreach ( timeSlot j in i.timeSlot )
 		{
 			if ( 
 				!TimeFree
 				( 
-					course[ n ].section[ i ].timeSlot[j].day, 
-					course[ n ].section[ i ].timeSlot[j].startTime, 
-					course[ n ].section[ i ].timeSlot[j].length 
+					j.day, 
+					j.startTime, 
+					j.length 
 				) 
 			) // if the time's taken already
 			{
@@ -25,13 +27,15 @@ public bool Generate ( Course course[ ], int n )
 		
 		if ( noConflicts )	// if we found a section that works
 		{
-			foreach ( timeSlot j in course.section[i].timeSlot )	//occupy all the timeSlots for that section
+			course[n].activeSection = ctr;
+			
+			foreach ( timeSlot j in i.timeSlot )	//occupy all the timeSlots for that section
 			{
 				OccupyTime
 				( 
-					course[ n ].section[ i ].timeSlot[j].day, 
-					course[ n ].section[ i ].timeSlot[j].startTime, 
-					course[ n ].section[ i ].timeSlot[j].length 
+					j.day, 
+					j.startTime, 
+					j.length 
 				) 
 			}
 			
@@ -39,15 +43,16 @@ public bool Generate ( Course course[ ], int n )
 				return true;
 			else 	//if generating the next course fails
 			{
-				foreach ( timeSlot j in course.section[i].timeSlot )		//unoccupy all the timeSlots we took earlier
+				foreach ( timeSlot j in i.timeSlot )		//unoccupy all the timeSlots we took earlier
 				{
-					time[ course.section[ i ].timeSlot[ j ].day ][ course.section[ i ].timeSlot[ j ].startTime ] = false;
+					time[ j.day ][ j.startTime ] = false;
 				}
 			}//section will now increment
 		}
 	}
 	
 	if ( !noConflicts )	// if the last available section didn't work, we need to change something from the previous course. Pass false back up.s
+		course[n].activeSection = 0;
 		return false;
 	
 }
