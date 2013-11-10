@@ -12,7 +12,7 @@ public bool Generate ( Course course[ ], int n )
 			if ( 
 				!TimeFree
 				( 
-					course[ n ].section[ i ].timeSlot[j].date, 
+					course[ n ].section[ i ].timeSlot[j].day, 
 					course[ n ].section[ i ].timeSlot[j].startTime, 
 					course[ n ].section[ i ].timeSlot[j].length 
 				) 
@@ -21,15 +21,15 @@ public bool Generate ( Course course[ ], int n )
 				noConflicts = false;		//then there's a conflict (lol)
 				break;						//breaks the nested loop, goes on to next section.
 			}								//note that if this is the last section, noConflicts will not be reset to true.
-		}			// if we go through every timeslot for the course and nothing's taken, noConflicts will be true when exiting.
+		}			// if we go through every timeSlot for the course and nothing's taken, noConflicts will be true when exiting.
 		
 		if ( noConflicts )	// if we found a section that works
 		{
-			foreach ( timeSlot j in course.section[i].timeSlot )	//occupy all the timeslots for that section
+			foreach ( timeSlot j in course.section[i].timeSlot )	//occupy all the timeSlots for that section
 			{
 				OccupyTime
 				( 
-					course[ n ].section[ i ].timeSlot[j].date, 
+					course[ n ].section[ i ].timeSlot[j].day, 
 					course[ n ].section[ i ].timeSlot[j].startTime, 
 					course[ n ].section[ i ].timeSlot[j].length 
 				) 
@@ -39,9 +39,9 @@ public bool Generate ( Course course[ ], int n )
 				return true;
 			else 	//if generating the next course fails
 			{
-				foreach ( timeSlot j in course.section[i].timeSlot )		//unoccupy all the timeslots we took earlier
+				foreach ( timeSlot j in course.section[i].timeSlot )		//unoccupy all the timeSlots we took earlier
 				{
-					time[ course.section[ i ].timeslot[ j ].day ][ course.section[ i ].timeslot[ j ].startTime ] = false;
+					time[ course.section[ i ].timeSlot[ j ].day ][ course.section[ i ].timeSlot[ j ].startTime ] = false;
 				}
 			}//section will now increment
 		}
@@ -53,7 +53,7 @@ public bool Generate ( Course course[ ], int n )
 }
 
 
-public bool TimeFree( int date, int startTime, int len )
+public bool TimeFree( int day, int startTime, int len )
 {
 	for ( int i = 0; i < len%30; i++ )
 	{
@@ -64,7 +64,7 @@ public bool TimeFree( int date, int startTime, int len )
 	return true;
 }
 
-public void OccupyTime ( int date, int startTime, int len )
+public void OccupyTime ( int day, int startTime, int len )
 {
 	for ( int i = 0; i < len%30; i++ )
 	{
