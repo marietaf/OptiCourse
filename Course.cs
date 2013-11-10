@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.IO;
 using Section;
 using TimeSlot;
@@ -6,14 +9,14 @@ using TimeSlot;
 class Course
 {
     //Declares an array of undefined length which will be determined later
-    Section [] sections;
-    
-    public Course( string fileName )
+    Section[] sections;
+
+    public Course(string fileName)
     {
         StreamReader sr = new StreamReader( fileName + ".txt" );
         string currentLine = sr.ReadLine();
-        
-        int sectionCount
+
+        int sectionCount = 0;
         // Counts the number of sections in the file
         while( !sr.EndOfStream )
         {
@@ -34,7 +37,7 @@ class Course
                     currentLine = sr.ReadLine();
                 
                 // Get section number and section type
-                section.Num = currentLine.Substring( 0, 3 );
+                section.Num = Convert.ToInt32(currentLine.Substring(0, 3));
                 section.Type = currentLine.Substring( 4, 6 );
                 
                 // Go to the heading of time slots
@@ -46,26 +49,26 @@ class Course
                 // Make array list with variable length to get the time slots
                 List <TimeSlot> timeSlotList = new List<TimeSlot>();
                 // Go through time slots and add them to the list
-                while( !currentLevel.IsNullOrWhiteSpace )
+                while( !String.IsNullOrWhiteSpace(currentLine) )
                 {
                     int cursor = 0;
                     int additionCount = 0;
                     // Finds the day(s) of the section
-                    while( currentLine[cursor] != " " )
+                    while( currentLine[cursor] != ' ' )
                     {
                         TimeSlot tempTimeSlot = new TimeSlot();
                         if( currentLine[cursor] == 'M' )
                             tempTimeSlot.Day = 0;
                         else if( currentLine[cursor] == 'T' && currentLine[cursor+1] != 'h' )
-                            temptTimeSlot.Day = 1;
+                            tempTimeSlot.Day = 1;
                         else if( currentLine[cursor] == 'W' )
-                            temptTimeSlot.Day = 2;
+                            tempTimeSlot.Day = 2;
                         else if( currentLine[cursor] == 'T' && currentLine[cursor+1] == 'h' )
-                            temptTimeSlot.Day = 3;
+                            tempTimeSlot.Day = 3;
                         else if( currentLine[cursor] == 'F' )
-                            temptTimeSlot.Day = 4;
+                            tempTimeSlot.Day = 4;
                         else if( currentLine[cursor] == 'S' )
-                            temptTimeSlot.Day = 5;
+                            tempTimeSlot.Day = 5;
                         if( currentLine[cursor] != 'h' )
                         {
                             timeSlotList.Add( tempTimeSlot );
@@ -76,35 +79,35 @@ class Course
                     // Go to where the time stamp starts
                     cursor++;
                     
-                    string timeStamp = currentLine.Substring( cursor, currentLine.Length()-1 );
+                    string timeStamp = currentLine.Substring( cursor, currentLine.Length-1 );
                     
                     // Update the length of the course in minutes based on the timestamp
-                    {
-                        // Check whether the hour is represented by one or two numbers
-                        int begHr = 2, endHr = 2;
-                        if( timeStamp[1] == ':' && timeStamp[11] == ':' )
-                            begHr = 1;
-                        else if( timeStamp[1] != ':' && timeStamp[11] == ':' )
-                            endHr = 1;
-                        else if( timeStamp[1] == ':' && timeStamp[10] == ':' )
-                        {   
-                            begHr = 1;
-                            endHr = 1;
-                        }
-                        
-                        int startTime = Convert.ToInt32( timeStamp.Substring( 0, begHr ) ) * 60;
-                        startTime += Convert.ToInt32( timeStamp.Substring( begHr+1, 2 ) );
-                        
-                        int endTime = Convert.ToInt32( timeStamp.Substring( begHr+8, endHr ) ) * 60;
-                        endTime += Convert.ToInt32( timeStamp.Substring( begHr+endHr+9, 2 ) );
-                        
-                        if( timeStamp[begHr+3] == 'P' )
-                            startTime += 12*60;
-                        if( timeStamp[begHr+endHr+11] == 'P' )
-                            endTime += 12*60;
-                            
-                        int length = endTime - startTime;
+                    
+                    // Check whether the hour is represented by one or two numbers
+                    int begHr = 2, endHr = 2;
+                    if( timeStamp[1] == ':' && timeStamp[11] == ':' )
+                        begHr = 1;
+                    else if( timeStamp[1] != ':' && timeStamp[11] == ':' )
+                        endHr = 1;
+                    else if( timeStamp[1] == ':' && timeStamp[10] == ':' )
+                    {   
+                        begHr = 1;
+                        endHr = 1;
                     }
+                        
+                    int startTime = Convert.ToInt32( timeStamp.Substring( 0, begHr ) ) * 60;
+                    startTime += Convert.ToInt32( timeStamp.Substring( begHr+1, 2 ) );
+                        
+                    int endTime = Convert.ToInt32( timeStamp.Substring( begHr+8, endHr ) ) * 60;
+                    endTime += Convert.ToInt32( timeStamp.Substring( begHr+endHr+9, 2 ) );
+                        
+                    if( timeStamp[begHr+3] == 'P' )
+                        startTime += 12*60;
+                    if( timeStamp[begHr+endHr+11] == 'P' )
+                        endTime += 12*60;
+                            
+                    int length = endTime - startTime;
+                    
                     // Find actual start time after 8am on half hour intervals
                     startTime = (startTime - 8*60)/30;
                     // Update the location of the course
@@ -112,7 +115,6 @@ class Course
                     currentLine = sr.ReadLine();
                     // Update the instructor for the course 
                     string instructor = currentLine;
-                    section.Instructor = instructor;
                     currentLine = sr.ReadLine();
                     // Skip over the dates -- unimportant 
                     currentLine = sr.ReadLine();
@@ -132,7 +134,7 @@ class Course
                 
                 // Create an array based on the List
                 TimeSlot [] timeSlots = new TimeSlot[timeSlotList.Count()];
-                for( int i = 0; i < timeSlotList; i++ )
+                for( int i = 0; i < timeSlotList.Count; i++ )
                 {
                     timeSlots[i] = timeSlotList[i];
                 }
