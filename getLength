@@ -2,6 +2,7 @@
 
 static int getLength( string str)
     {
+		string temp = "";
 		int st = 0, end = 0, i = 0;
 			
 		while ( str[i] != ':' )
