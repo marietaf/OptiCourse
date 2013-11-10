@@ -20,6 +20,22 @@ class Schedule
         }
     }
     
+    public Schedule( Course course1, Course course2, Course course3, Course course4, Course course5 )
+    {
+        // Create time slots - 7 days with 28 slots per day
+        scheduleAvail = new bool[7, 28];
+        courseCount = 5;
+        
+        // Assume all time slots are free
+        foreach( bool slot in scheduleAvail )
+        {
+            slot = false;
+        }
+        
+        // Add in the courses to the first available times - TREVOR
+        
+    }
+    
     public void AddCourse()
     {
     
