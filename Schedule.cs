@@ -4,7 +4,7 @@ class Schedule
 {
     // Arrays for the schedule
     //Course timeSlotArray[] = new Course[7*28];
-    bool [,] scheduleAvail;
+    public bool [,] scheduleAvail;
     int courseCount;
     
     public Schedule()
