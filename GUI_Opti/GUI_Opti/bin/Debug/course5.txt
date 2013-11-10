@@ -1,0 +1,413 @@
+
+							
+	
+001-LEC(6171)
+
+	
+Section
+Status
+ Open
+
+	
+Session
+
+	
+Regular
+	
+Days & Times	Room	Instructor	Meeting Dates
+MWF 8:30AM - 9:20AM
+AL    116
+Carey Bissonnette
+09/09/2013 - 12/02/2013
+
+	
+	
+002-LEC(6172)
+
+	
+Section
+Status
+ Open
+
+	
+Session
+
+	
+Regular
+	
+Days & Times	Room	Instructor	Meeting Dates
+MWF 9:30AM - 10:20AM
+AL    116
+Dara Gilbert
+09/09/2013 - 12/02/2013
+
+	
+	
+003-LEC(6173)
+
+	
+Section
+Status
+ Open
+
+	
+Session
+
+	
+Regular
+	
+Days & Times	Room	Instructor	Meeting Dates
+MWF 11:30AM - 12:20PM
+RCH   101
+Sonny Lee
+09/09/2013 - 12/02/2013
+
+	
+	
+004-LEC(6439)
+
+	
+Section
+Status
+ Open
+
+	
+Session
+
+	
+Regular
+	
+Days & Times	Room	Instructor	Meeting Dates
+MWF 12:30PM - 1:20PM
+DC   1351
+Kristina Lekin
+09/09/2013 - 12/02/2013
+
+	
+	
+005-LEC(6637)
+
+	
+Section
+Status
+ Open
+
+	
+Session
+
+	
+Regular
+	
+Days & Times	Room	Instructor	Meeting Dates
+MWF 1:30PM - 2:20PM
+RCH   101
+Sonny Lee
+09/09/2013 - 12/02/2013
+
+	
+	
+006-LEC(7835)
+
+	
+Section
+Status
+ Open
+
+	
+Session
+
+	
+Regular
+	
+Days & Times	Room	Instructor	Meeting Dates
+MWF 10:30AM - 11:20AM
+OPT 1129
+Kristina Lekin
+09/09/2013 - 12/02/2013
+
+	
+	
+101-TUT(6365)
+
+	
+Section
+Status
+ Open
+
+	
+Session
+
+	
+Regular
+	
+Days & Times	Room	Instructor	Meeting Dates
+T 9:30AM - 11:20AM
+DC   1351
+Carey Bissonnette
+09/10/2013 - 09/10/2013
+T 9:30AM - 11:20AM
+DC   1351
+Carey Bissonnette
+09/24/2013 - 09/24/2013
+T 9:30AM - 11:20AM
+DC   1351
+Carey Bissonnette
+10/08/2013 - 10/08/2013
+T 9:30AM - 11:20AM
+DC   1351
+Carey Bissonnette
+10/22/2013 - 10/22/2013
+T 9:30AM - 11:20AM
+DC   1351
+Carey Bissonnette
+11/05/2013 - 11/05/2013
+T 9:30AM - 11:20AM
+DC   1351
+Carey Bissonnette
+11/19/2013 - 11/19/2013
+
+	
+	
+102-TUT(6366)
+
+	
+Section
+Status
+ Open
+
+	
+Session
+
+	
+Regular
+	
+Days & Times	Room	Instructor	Meeting Dates
+T 9:30AM - 11:20AM
+DC   1351
+Carey Bissonnette
+09/17/2013 - 09/17/2013
+T 9:30AM - 11:20AM
+DC   1351
+Carey Bissonnette
+10/01/2013 - 10/01/2013
+T 9:30AM - 11:20AM
+DC   1351
+Carey Bissonnette
+10/15/2013 - 10/15/2013
+T 9:30AM - 11:20AM
+DC   1351
+Carey Bissonnette
+10/29/2013 - 10/29/2013
+T 9:30AM - 11:20AM
+DC   1351
+Carey Bissonnette
+11/12/2013 - 11/12/2013
+T 9:30AM - 11:20AM
+DC   1351
+Carey Bissonnette
+11/26/2013 - 11/26/2013
+
+	
+	
+104-TUT(6368)
+
+	
+Section
+Status
+ Open
+
+	
+Session
+
+	
+Regular
+	
+Days & Times	Room	Instructor	Meeting Dates
+T 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+09/17/2013 - 09/17/2013
+T 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+10/01/2013 - 10/01/2013
+T 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+10/15/2013 - 10/15/2013
+T 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+10/29/2013 - 10/29/2013
+T 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+11/12/2013 - 11/12/2013
+T 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+11/26/2013 - 11/26/2013
+
+	
+	
+105-TUT(6440)
+
+	
+Section
+Status
+ Open
+
+	
+Session
+
+	
+Regular
+	
+Days & Times	Room	Instructor	Meeting Dates
+Th 9:30AM - 11:20AM
+M3 1006
+Carey Bissonnette
+09/12/2013 - 09/12/2013
+Th 9:30AM - 11:20AM
+M3 1006
+Carey Bissonnette
+09/26/2013 - 09/26/2013
+Th 9:30AM - 11:20AM
+M3 1006
+Carey Bissonnette
+10/10/2013 - 10/10/2013
+Th 9:30AM - 11:20AM
+M3 1006
+Carey Bissonnette
+10/24/2013 - 10/24/2013
+Th 9:30AM - 11:20AM
+M3 1006
+Carey Bissonnette
+11/07/2013 - 11/07/2013
+Th 9:30AM - 11:20AM
+M3 1006
+Carey Bissonnette
+11/21/2013 - 11/21/2013
+
+	
+	
+106-TUT(6548)
+
+	
+Section
+Status
+ Open
+
+	
+Session
+
+	
+Regular
+	
+Days & Times	Room	Instructor	Meeting Dates
+Th 9:30AM - 11:20AM
+M3 1006
+Carey Bissonnette
+09/19/2013 - 09/19/2013
+Th 9:30AM - 11:20AM
+M3 1006
+Carey Bissonnette
+10/03/2013 - 10/03/2013
+Th 9:30AM - 11:20AM
+M3 1006
+Carey Bissonnette
+10/17/2013 - 10/17/2013
+Th 9:30AM - 11:20AM
+M3 1006
+Carey Bissonnette
+10/31/2013 - 10/31/2013
+Th 9:30AM - 11:20AM
+M3 1006
+Carey Bissonnette
+11/14/2013 - 11/14/2013
+Th 9:30AM - 11:20AM
+M3 1006
+Carey Bissonnette
+11/28/2013 - 11/28/2013
+
+	
+	
+107-TUT(6576)
+
+	
+Section
+Status
+ Open
+
+	
+Session
+
+	
+Regular
+	
+Days & Times	Room	Instructor	Meeting Dates
+Th 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+09/12/2013 - 09/12/2013
+Th 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+09/26/2013 - 09/26/2013
+Th 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+10/10/2013 - 10/10/2013
+Th 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+10/24/2013 - 10/24/2013
+Th 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+11/07/2013 - 11/07/2013
+Th 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+11/21/2013 - 11/21/2013
+
+	
+	
+108-TUT(6577)
+
+	
+Section
+Status
+ Open
+
+	
+Session
+
+	
+Regular
+	
+Days & Times	Room	Instructor	Meeting Dates
+Th 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+09/19/2013 - 09/19/2013
+Th 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+10/03/2013 - 10/03/2013
+Th 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+10/17/2013 - 10/17/2013
+Th 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+10/31/2013 - 10/31/2013
+Th 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+11/14/2013 - 11/14/2013
+Th 4:30PM - 6:20PM
+DC   1351
+Carey Bissonnette
+11/28/2013 - 11/28/2013
