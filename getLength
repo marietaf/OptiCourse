@@ -1,0 +1,55 @@
+//gets length from time string
+
+static int getLength( string str)
+    {
+		int st = 0, end = 0, i = 0;
+			
+		while ( str[i] != ':' )
+		{
+			temp += str[i];
+			i++;
+		}
+		st += 60*Convert.ToInt32(temp);
+		temp = "";
+		i++;
+
+		temp += str[i];
+		i++;
+
+		temp += str[i];
+		i++;				Console.WriteLine( " {0}", temp);
+
+		st += Convert.ToInt32(temp);		Console.WriteLine( " {0}", st);
+		temp = "";
+		
+
+		
+		if (str[i] == 'p')
+			st += 60*12;
+			
+		i += 5;
+		
+		while ( str[i] != ':' )
+		{
+			temp += str[i];
+			i++;
+		}	
+		end += 60*Convert.ToInt32(temp);
+
+		temp = "";
+		i ++;
+		
+		temp += str[i];
+		i++;
+
+		temp += str[i];
+		i++;
+		
+		end += Convert.ToInt32(temp);
+		temp = "";
+		
+		if (str[i] == 'p')
+			end += 60*12;
+		
+		return ( end - st );
+	}
