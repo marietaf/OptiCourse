@@ -1,4 +1,3 @@
-
 public bool Generate ( Course course[ ], int n )
 {
 
@@ -10,7 +9,14 @@ public bool Generate ( Course course[ ], int n )
 		
 		foreach ( timeSlot j in course[ n ].section[ i ].timeSlot )
 		{
-			if ( time[ course[ n ].section[ i ].timeslot[ j ].day ][ course[ n ].section[ i ].timeslot[ j ].startTime ] ) // if the time's taken already
+			if ( 
+				!TimeFree
+				( 
+					course[ n ].section[ i ].timeSlot[j].date, 
+					course[ n ].section[ i ].timeSlot[j].startTime, 
+					course[ n ].section[ i ].timeSlot[j].length 
+				) 
+			) // if the time's taken already
 			{
 				noConflicts = false;		//then there's a conflict (lol)
 				break;						//breaks the nested loop, goes on to next section.
@@ -21,7 +27,12 @@ public bool Generate ( Course course[ ], int n )
 		{
 			foreach ( timeSlot j in course.section[i].timeSlot )	//occupy all the timeslots for that section
 			{
-				time[ course.section[ i ].timeslot[ j ].day ][ course.section[ i ].timeslot[ j ].startTime ] = true;
+				OccupyTime
+				( 
+					course[ n ].section[ i ].timeSlot[j].date, 
+					course[ n ].section[ i ].timeSlot[j].startTime, 
+					course[ n ].section[ i ].timeSlot[j].length 
+				) 
 			}
 			
 			if ( n == course.Length || Generate( course, n + 1 ) )	//recur. If it's the last in the array or we get true back from one level down, pass true back up.
@@ -39,4 +50,24 @@ public bool Generate ( Course course[ ], int n )
 	if ( !noConflicts )	// if the last available section didn't work, we need to change something from the previous course. Pass false back up.s
 		return false;
 	
+}
+
+
+public bool TimeFree( int date, int startTime, int len )
+{
+	for ( int i = 0; i < len%30; i++ )
+	{
+		if ( time[ day ][ startTime + i ] )
+			return false
+	}
+	
+	return true;
+}
+
+public void OccupyTime ( int date, int startTime, int len )
+{
+	for ( int i = 0; i < len%30; i++ )
+	{
+		time[ day ][ startTime + i ] = true;
+	}
 }
